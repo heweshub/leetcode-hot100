@@ -8,7 +8,9 @@ author: cjhcw
 #
 # 以上就是题目，下面是求解思路：
 #
-# 输入是倒序，输出要求的也是倒序，那就直接在初始的两个链表上操作，即对应位置上的元素相加，这里需要主要的是进位，可以用一个变量存储，很重要的一点是两个的位数可能不一致，下面是求解的代码：
+# 输入是倒序，输出要求的也是倒序，那就直接在初始的两个链表上操作，
+# 即对应位置上的元素相加，这里需要主要的是进位，可以用一个变量存储，
+# 很重要的一点是两个的位数可能不一致，下面是求解的代码：
 
 
 class Solution:
@@ -24,8 +26,10 @@ class Solution:
             current.next = ListNode(sum % 10)
             reminder = sum // 10
 
-            if l1: l1 = l1.next
-            if l2: l2 = l2.next
+            if l1:
+                l1 = l1.next
+            if l2:
+                l2 = l2.next
 
             current = current.next
         if reminder:
