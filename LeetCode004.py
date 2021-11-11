@@ -38,4 +38,4 @@ def findMedianSortedArrays(nums1, nums2):
 
 
 if __name__ == '__main__':
-    print(findMedianSortedArrays([1,3], [2]))
+    print(findMedianSortedArrays([1, 3], [2]))
