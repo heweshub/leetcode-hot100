@@ -4,6 +4,9 @@ author: cjhcw
 """
 
 
+# 5. 最长回文子串
+# 给你一个字符串 s，找到 s 中最长的回文子串
+
 class Solution:
     # 寻找最长回文串，返回下标
     def expandAroundCenter(self, s, left, right):
