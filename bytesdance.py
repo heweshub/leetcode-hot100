@@ -3,7 +3,6 @@
 author: cjhcw
 """
 
-
 # 1 实现字符串转换成整数的函数:
 
 # def str2number(s):
@@ -165,6 +164,7 @@ import collections
 #         if len(self) > self.capacity:
 #             self.popitem(last=False)
 
+#  双链表
 class DLinkedNode:
     def __init__(self, key=0, value=0):
         self.key = key
@@ -176,11 +176,12 @@ class DLinkedNode:
 class LRUCache:
     def __init__(self, cap):
         self.cache = dict()
-
+        # 初始化
         self.head = DLinkedNode()
         self.tail = DLinkedNode()
         self.head.next = self.tail
         self.tail.prev = self.head
+
         self.capacity = cap
         self.size = 0
 
