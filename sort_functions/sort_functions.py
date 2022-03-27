@@ -137,7 +137,10 @@ def merge(left, right):
 
 
 if __name__ == '__main__':
-    nums = [1, 2, 4, 5, 3, 6]
+    # nums = [1, 2, 4, 5, 3, 6]
+    input_str = input()
+    nums = input_str.split(" ")
+    print(nums)
     # print(maopaoSort(nums))
     # kuaisuSort(nums, 0, len(nums) - 1)
     # print(nums)

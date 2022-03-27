@@ -11,7 +11,7 @@ func levelOrder(root *TreeNode) [][]int {
 	if root == nil {
 		return res
 	}
-	//每一层的队列
+	//当前层的队列
 	q := []*TreeNode{root}
 	for i := 0; len(q) > 0; i++ {
 		res = append(res, []int{})
