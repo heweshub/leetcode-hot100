@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func longestPalindrome(s string) string {
+func longestPalindrome1(s string) string {
 	n := len(s)
 	if n < 2 {
 		return s
@@ -40,6 +40,29 @@ func longestPalindrome(s string) string {
 	return s[begin : begin+max]
 }
 
+func longestPalindrome2(s string) string {
+	n := len(s)
+	start, end := 0, 0
+	for i := 0; i < n; i++ {
+		start1, end1 := find(s, i, i)
+		start2, end2 := find(s, i, i+1)
+		if end-start < end1-start1 {
+			start, end = start1, end1
+		}
+		if end-start < end2-start2 {
+			start, end = start2, end2
+		}
+	}
+	return s[start : end+1]
+}
+func find(s string, l, r int) (int, int) {
+	for l >= 0 && r < len(s) && s[l] == s[r] {
+		r++
+		l--
+	}
+	return l + 1, r - 1
+}
+
 func main() {
-	fmt.Println(longestPalindrome("aa"))
+	fmt.Println(longestPalindrome1("aa"))
 }
