@@ -1,4 +1,4 @@
-package dp
+package main
 
 func minimumTotal(t [][]int) int {
 	if len(t) <= 1 {
@@ -23,11 +23,4 @@ func minimumTotal(t [][]int) int {
 		}
 	}
 	return minLen
-}
-
-func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
 }
