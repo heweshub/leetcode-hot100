@@ -8,6 +8,8 @@ func search(nums []int, target int) int {
 		if nums[mid] == target {
 			return mid
 		}
+		// 定位target的位置
+		// nums[0] nums[mid] nums[len(nums)-1] 与target之间的大小比较
 		if nums[0] <= nums[mid] {
 			if nums[0] <= target && target < nums[mid] {
 				r = mid - 1

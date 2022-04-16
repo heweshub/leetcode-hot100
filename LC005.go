@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 动态规划版本
 func longestPalindrome1(s string) string {
 	n := len(s)
 	if n < 2 {
@@ -16,6 +17,7 @@ func longestPalindrome1(s string) string {
 	}
 	max := 1
 	begin := 0
+	// 遍历回文串的长度
 	for Length := 2; Length <= n; Length++ {
 		for i := 0; i < n; i++ {
 			j := Length + i - 1
@@ -40,6 +42,7 @@ func longestPalindrome1(s string) string {
 	return s[begin : begin+max]
 }
 
+// 中心扩散法
 func longestPalindrome2(s string) string {
 	n := len(s)
 	start, end := 0, 0
